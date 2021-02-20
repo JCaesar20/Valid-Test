@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./app.js",
-    "dev": "env-cmd ./config/dev.env nodemon ./app.js",
-    "build": "cd ../client && npm run build",
-    "install-client": "cd ../client && npm install",
+    "start": "node ./server/app.js",
+    "dev": "env-cmd ./server/config/dev.env nodemon ./server/app.js",
+    "build": "cd ./client && npm run build",
+    "install-client": "cd ./client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build"
   },
   "author": "",
