@@ -42,6 +42,7 @@ function FormComponent() {
         }
 
         const response = await axios.post('form', data)
+        setLoading(false);
         if (response.data.newForm) {
             setAnrede('');
             setVorName('');
@@ -58,7 +59,6 @@ function FormComponent() {
             setMsg(response.data.error)
             setStatus('Error')
         }
-        setLoading(false);
 
     };
 
