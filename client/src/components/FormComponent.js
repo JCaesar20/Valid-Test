@@ -19,11 +19,11 @@ function FormComponent() {
     const [status, setStatus] = useState('');
 
     const handleSubmit = async (event) => {
+        event.preventDefault();
+        event.stopPropagation();
         setLoading(true)
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
             setLoading(false)
             setModalShow(true)
             setMsg('Bitte füllen Sie alle erforderlichen Felder und Validierungen aus!')
