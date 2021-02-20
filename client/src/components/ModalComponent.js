@@ -19,7 +19,7 @@ function ModalComponent(props) {
                 </p>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
+                <Button onClick={props.changeState}>Close</Button>
             </Modal.Footer>
         </Modal>
     )
