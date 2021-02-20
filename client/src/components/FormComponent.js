@@ -68,7 +68,6 @@ function FormComponent() {
             {loading && <Loading loading={loading} />}
             <ModalComponent
                 show={modalShow}
-                backdrop="static"
                 onHide={() => setModalShow(false)}
                 status={status}
                 msg={msg}
